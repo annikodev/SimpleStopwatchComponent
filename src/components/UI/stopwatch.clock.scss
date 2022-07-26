@@ -1,0 +1,68 @@
+@mixin block {
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(167, 167, 167, 0.15);
+  backdrop-filter: blur(6px);
+  color: #464646;
+}
+
+.clock {
+  @include block;
+  .lineartimer {
+    @include block;
+    margin-bottom: 10px;
+
+    span {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .clocktimer {
+    @include block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    padding: 50px 0px;
+  }
+}
+
+.setButtnon {
+  @include block;
+  display: flex;
+  flex-direction: column;
+  .startBtn {
+    @include block;
+    border: 1px solid #747474;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+  }:hover {
+       transition: 0.5s;
+       background: #a2a2a2;
+  }
+
+  .lapsField {
+    @include block;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
+  .clock>.lineartimer>span {
+    font-size: 3vw;
+  }
+  .clocktimer>span {
+    font-size: 10vw;
+  }
+}
