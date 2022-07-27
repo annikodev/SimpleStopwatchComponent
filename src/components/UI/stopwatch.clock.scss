@@ -6,6 +6,7 @@
   color: #464646;
 }
 
+
 .clock {
   @include block;
   .lineartimer {
@@ -38,11 +39,13 @@
     border: 1px solid #747474;
     cursor: pointer;
     text-align: center;
-    transition: 0.5s;
-  }:hover {
-       transition: 0.5s;
-       background: #a2a2a2;
+
   }
+  .startBtn:hover {
+    transition: 0.5s;
+    background: #a2a2a2;
+  }
+
 
   .lapsField {
     @include block;
@@ -50,8 +53,18 @@
   }
 }
 
+.lapsbtn {
+  @include block;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
 
-
+}
+.lapsbtn:hover {
+  transition: 0.5s;
+  background: #a2a2a2;
+}
 
 
 
